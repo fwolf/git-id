@@ -50,7 +50,7 @@ REPO=${REPO##*/}
 REPO=${REPO%.*}
 
 # Get branch
-BRANCH=`git status |head -1 |awk '{print $4}'`
+BRANCH=`git branch | grep ^* | awk '{print $2}'`
 
 # Get sha1
 SHA1=`git show $HASH |head -1 |awk '{print $2}' |head -c 8`
