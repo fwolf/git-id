@@ -22,7 +22,7 @@ function PrintUsage {
 Usage: `basename $0` [commit|head]
 
 Parameters:
-  commit|head       Sha1 hash or head name of git, default HEAD.
+  commit|head       Commit id(sha1 hash) or head name of git, default HEAD.
 EOF
 }
 

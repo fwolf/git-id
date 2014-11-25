@@ -9,7 +9,7 @@
 #
 # Generate a common git version number.
 #
-# Format: repo_name-branch-hash(head-8-digi)-revision
+# Format: [repo name]-[branch]-[hash(head 8 digits)]-r[total revisions]
 # eg: git-id-master-e6835ae5-r2
 #
 # Start from 2009-08-10.
@@ -19,10 +19,10 @@
 # Print usage message
 function PrintUsage {
     cat <<-"EOF"
-Usage: `basename $0` [hash]
+Usage: `basename $0` [commit|head]
 
 Parameters:
-  hash          Sha1 hash of git, default HEAD.
+  commit|head       Commit id(sha1 hash) or head name of git, default HEAD.
 EOF
 }
 
