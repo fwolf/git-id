@@ -55,10 +55,10 @@ REPO=${REPO%.*}
 BRANCH=`git branch | grep ^* | awk '{print $2}'`
 
 # Get sha1
-SHA1=`git show $HASH |head -1 |awk '{print $2}' |head -c 8`
+SHA1=`git show $HASH | head -1 | awk '{print $2}' | head -c 8`
 
 # Get revision
-REV=`git log --pretty=oneline |wc -l`
+REV=`git rev-list HEAD | wc -l`
 
 # Print result
 echo $REPO-$BRANCH-$SHA1-r$REV
